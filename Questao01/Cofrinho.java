@@ -12,18 +12,53 @@ A classe Cofrinho deve implementar métodos para:
 
 public class Cofrinho {
     ArrayList<Moeda> Cofrinho;
-    int i;
-    float cont;
+
 
     public void receberMoedas(Moeda m){ 
         this.Cofrinho.add(m);
     }
-    public void contarTotalDepositado(Moeda m){ 
-        cont = 0;
+
+    public void TotalDepositado(Moeda m){ 
+        float cont=0;
+        int i;
+
         for(i=0; i<Cofrinho.size();i++){
             cont = cont + this.Cofrinho.get(i).getValor();
         }
         
     }
+
+    public void qtdDaMoeda(float x){ 
+        int i, cont=0;
+        
+        for(i=0; i<Cofrinho.size();i++){
+            if (Cofrinho.get(i).getValor()== x){
+                cont=cont+1;
+            }
+            
+        }
+
+
+    }
+
+    public void NumMoedasArmazenadas(){ 
+        
+        System.out.println(Cofrinho.size());
+    }
+
+    public void maiorMoeda(){ 
+        float maior;
+        int i;
+
+        maior=Cofrinho.get(0).getValor();
+        for(i=0; i<Cofrinho.size();i++){
+            if (Cofrinho.get(i).getValor()>maior){
+                maior = Cofrinho.get(i).getValor();
+            }
+        }
+        
+    }
+
+
 
 }
