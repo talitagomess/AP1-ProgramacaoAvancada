@@ -1,4 +1,4 @@
-package Questao3;
+package Questao03;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -42,6 +42,11 @@ public class Fila {
        aviao.printarInformacoes();
     }
 
+    public void printaUltimoElemento() {
+        Aviao aviao = this.retornarUltimoElemento();
+        aviao.printarInformacoes();
+     } 
+
     public void printarELimpafila() {
        int maxLimit = this.quantidadeAvioes();
         for (int i = 0; i < maxLimit; i++) {
@@ -65,6 +70,10 @@ public class Fila {
 
     public Aviao retornarPrimeiroElemento() {
         return fila.getFirst();
+    }
+
+    public Aviao retornarUltimoElemento() {
+        return fila.getLast();
     }
 
     public void mostrarPrimeiroAviao() {
