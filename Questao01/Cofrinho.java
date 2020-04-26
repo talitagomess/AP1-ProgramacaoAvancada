@@ -25,7 +25,8 @@ public class Cofrinho {
         for(i=0; i<Cofrinho.size();i++){
             cont = cont + this.Cofrinho.get(i).getValor();
         }
-        
+
+        System.out.println("Total depositado no cofrinho: "+ cont);   
     }
 
     public void qtdDaMoeda(float x){ 
@@ -37,13 +38,13 @@ public class Cofrinho {
             }
             
         }
-
+        System.out.println("Quantidade de moedas de"+ x +":"+ cont);
 
     }
 
     public void NumMoedasArmazenadas(){ 
         
-        System.out.println(Cofrinho.size());
+        System.out.println("Número total de moedas armazenadas: "+ Cofrinho.size());
     }
 
     public void maiorMoeda(){ 
