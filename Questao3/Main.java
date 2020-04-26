@@ -14,7 +14,7 @@ class Main {
          * e) Listar as características do primeiro avião da fila.
          */
         Fila filaDeAvioes = new Fila();
-        System.out.println("São quantos aviões? \n");
+        System.out.println("\n São quantos aviões? \t");
         Scanner input = new Scanner(System.in);
         int numeroDeAvioes = input.nextInt();
         input.close();
@@ -23,27 +23,49 @@ class Main {
             Aviao aviao = new Aviao(name, count+1);
             filaDeAvioes.enfileirarAviaoCom(aviao);
         }
+        System.out.println("\n Questão A \n");
+        questionA(filaDeAvioes);
+        System.out.println("\n Questão B \n");
+        questionB(filaDeAvioes);
+        System.out.println("\n Questão C \n");
+        questionC(filaDeAvioes);
+        System.out.println("\n Questão D \n");
+        questionD(filaDeAvioes);
+        System.out.println("\n Questão E \n");
+        questionE(filaDeAvioes);
+    }
+    // Fim de Main
 
+    public static void questionA(Fila filaDeAvioes) {
         // a) Listar o número de aviões aguardando na fila de decolagem;
         filaDeAvioes.printarFila();
         //Fim da Questão A
+    }
 
+    public static void questionB(Fila filaDeAvioes) {
         // b) Autorizar a decolagem do primeiro avião da fila; 
         filaDeAvioes.printaPrimeiroElemento();
         filaDeAvioes.desenfileirar();
         //Fim da Questão B
+    } 
 
+    public static void questionC(Fila filaDeAvioes) {
         // c) Adicionar um avião à fila de espera;
         Aviao novoAviao = new Aviao("Gol", 174);
         filaDeAvioes.enfileirarAviaoCom(novoAviao);
+        filaDeAvioes.printaUltimoElemento();
         // Fim da Questão C
+    } 
+
+    public static void questionD(Fila filaDeAvioes) {
         //d) Listar todos os aviões na fila de espera; 
         filaDeAvioes.printarFila();
         //Fim da Questão D
+    } 
+
+    public static void questionE(Fila filaDeAvioes) {
         //e) Listar as características do primeiro avião da fila.
         filaDeAvioes.printaPrimeiroElemento();
-         //Fim da Questão F
-    }
-    // Fim de Main
-
+        //Fim da Questão F
+    } 
 }
