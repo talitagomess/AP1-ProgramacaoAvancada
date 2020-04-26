@@ -1,4 +1,4 @@
-package Questao3;
+package Questao03;
 
 public class Aviao {
 

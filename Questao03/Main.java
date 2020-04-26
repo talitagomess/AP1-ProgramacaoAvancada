@@ -1,4 +1,4 @@
-package Questao3;
+package Questao03;
 
 import java.io.IOException;
 import java.util.Scanner;
